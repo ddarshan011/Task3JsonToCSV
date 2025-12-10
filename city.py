@@ -21,13 +21,13 @@ def indian_cities():
         # the common keys that have the cities list
         cities_list = data.get('cities') #getting list from dict
         if isinstance(cities_list, list):
-            data = cities_list  # Now data is the list we need
+            data = cities_list  # Now data is the list 
         else:
             print("No cities list found in dict. Keys:", list(data.keys()))
             return []
 
     cities = []
-    for city in data:  # Now it's guaranteed to be a list
+    for city in data:
         cities.append({
             'city': city.get('City', 'N/A'),
             'state': city.get('State', 'N/A'),
